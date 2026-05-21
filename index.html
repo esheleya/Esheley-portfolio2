@@ -266,20 +266,21 @@
                 </div>
             </div>
 
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xzdwrald" method="POST">
                 <div class="form-group">
-                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="text" name="nome" placeholder="Seu Nome" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="Seu Email" required>
+                    <input type="email" name="email" placeholder="Seu Email" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Assunto" required>
+                    <input type="text" name="assunto" placeholder="Assunto" required>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Sua Mensagem" rows="6" required></textarea>
+                    <textarea name="mensagem" placeholder="Sua Mensagem" rows="6" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                <button type="submit" class="btn btn-primary" id="submitBtn">Enviar Mensagem</button>
+                <div id="formStatus" style="margin-top: 10px; font-weight: bold; display: none;"></div>
             </form>
         </div>
     </section>
