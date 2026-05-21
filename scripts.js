@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Isso impede que o código antigo (mailto) funcione
             
             const formData = new FormData(this);
             
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
             submitBtn.textContent = 'Enviando...';
             formStatus.style.display = 'block';
-            formStatus.style.color = '#4a7c72'; // Cor do seu tema
+            formStatus.style.color = '#4a7c72'; 
             formStatus.textContent = 'Enviando sua mensagem...';
             
             try {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Smooth Scroll
+// O restante das animações e scroll (que você já tinha)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -55,7 +55,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Classe ativa no scroll e Animações
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav a');
@@ -88,4 +87,3 @@ document.querySelectorAll('.experience-item, .project-card, .skill-category').fo
 const style = document.createElement('style');
 style.textContent = `.nav a.active { color: #4a7c72; border-bottom: 2px solid #4a7c72; padding-bottom: 5px; }`;
 document.head.appendChild(style);
-
